@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoBoldItalic;
+  src: url(Roboto/Roboto/Roboto-BoldItalic.ttf);
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url(Roboto/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: LoraItalic;
+  src: url(Lora/Lora-Italic.ttf);
+}
+.fullpage {
+  min-height: 100%;
+}
+.midpage {
+  width: 1366px;
+  margin: 0 auto;
+}
+nav {
+  margin-top: 47px;
+}
+nav .Links a {
+  text-decoration: none;
+  color: black;
+  margin-right: 92px;
+  font-family: RobotoLight;
+}
+nav .Links a.active-Link {
+  color: #ef767a;
+  font-family: RobotoBoldItalic;
+}
+.spanner {
+  float: right;
+  color: black;
+  font-family: RobotoBoldItalic;
+}
+.hero {
+  height: 120px;
+margin-top: 25px;
+  margin-left: 80px;
+  font-size: 40px;
+  color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpara {
+  margin-top: 137px;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: LoraItalic;
+}
+.para1 {
+  width: 513px;
+  height: 322px;
+  font-size: 16px;
+}
+.para2 {
+  width: 513px;
+  height: 238px;
+  font-size: 16px;
+}
+.centpg {
+  width: 932px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pers1 { 
+  margin-top: 10px; 
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+} 
+.p1para { 
+  width: 813px; 
+  height: 420px; 
+  font-family: LoraItalic; 
+
+  font-size: 20px;
+} 
+.pers2 { 
+  margin-top: 10px; 
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+} 
+.p1box { 
+} 
+.pertitle { 
+  color: black; 
+  font-size: 24px; 
+  font-family: RobotoBoldItalic; 
+} 
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: #f8f8f8;
+}
+.word3 {
+  margin-top: 30px;
+}
+.footbox {
+  font-size: 16px;
+  font-family: RobotoLight;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bar {
+  fill: steelblue;
+}
+.dset{
+  margin-left: 400px;
+  color: black;
+  font-family: RobotoBoldItalic;
+  font-size: 25px;
+}
+.dtype{
+  margin-left: 600px;
+  color: black;
+  font-family: RobotoBoldItalic;
+  font-size: 25px;
+  margin-bottom: 70px;
+}
+.dtype1{
+  margin-left: 400px;
+  color: black;
+  font-family: RobotoBoldItalic;
+  font-size: 25px;
+  margin-bottom: 70px;
+}
