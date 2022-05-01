@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Home</title> 
+    <link rel="stylesheet" href="css/styles.css" /> 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head> 
+  <body> 
+    <section class = "fullpage"> 
+    <div class="midpage"> 
+      <nav> 
+        <div class="Links"> 
+          <a class="active-Link" href="index.html">Home</a> 
+          <a class="active-Link" href="bysex.html">By Sex</a> 
+          <a class="active-Link" href="byfamsize.html">By Family Size</a> 
+          <a class="active-Link" href="doc.html">Doc</a> 
+        </div> 
+        <div class="logo"> 
+            <span class="spanner"> VisINFO Final </span> 
+        </div> 
+      </nav> 
+      <header class="hero">Student Alcohol Consumption (% relative ro total 100% per graph)</header> 
+      <div class="dtype" > Participants: 395</div>
+      <p>
+        <svg id="svg1" width="300" height="400">
+
+        <rect id="bar1" x="50" y="72.64705882352942" width="30" height="57.35294117647059" style="fill: steelblue"></rect>
+        <rect id="bar2" x="112" y="103.23529411764707" width="30" height="26.76470588235294" style="fill: steelblue"></rect>
+
+        <text x="50" y="145">Male</text>
+        <text x="112" y="145">Female</text>
+        <text x="112" y="200">Sex</text>
+
+        <line x1="40" x2="180" y1="130" y2="130" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="130" stroke="black"></line>  
+    </svg>
+
+    <svg id="svg2" width="300" height="400">
+
+        <rect id="bar1" x="70" y="72.64705882352942" width="30" height="57.35294117647059" style="fill: steelblue"></rect>
+        <rect id="bar2" x="160" y="103.23529411764707" width="30" height="26.76470588235294" style="fill: steelblue"></rect>
+
+        <text x="50" y="145">Gabriel(GP)</text>
+        <text x="140" y="145">Mousinho(MS)</text>
+        <text x="112" y="200">School</text>
+
+        <line x1="40" x2="240" y1="130" y2="130" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="130" stroke="black"></line>  
+    </svg>
+
+    <svg id="svg3" width="300" height="400">
+
+        <rect id="bar1" x="50" y="72.64705882352942" width="30" height="57.35294117647059" style="fill: steelblue"></rect>
+        <rect id="bar2" x="112" y="103.23529411764707" width="30" height="26.76470588235294" style="fill: steelblue"></rect>
+
+        <text x="50" y="145">Urban</text>
+        <text x="112" y="145">Rural</text>
+        <text x="75" y="200">Address</text>
+    
+        <line x1="40" x2="180" y1="130" y2="130" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="130" stroke="black"></line>
+    </svg>
+
+    <svg id="svg4" width="300" height="400">
+
+        <rect id="bar1" x="50" y="72.64705882352942" width="30" height="57.35294117647059" style="fill: steelblue"></rect>
+        <rect id="bar2" x="112" y="103.23529411764707" width="30" height="26.76470588235294" style="fill: steelblue"></rect>
+
+
+        <text x="50" y="145">LE3</text>
+        <text x="112" y="145">GT3</text>
+        <text x="75" y="200">Family Size</text>
+    
+        <line x1="40" x2="180" y1="130" y2="130" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="130" stroke="black"></line>
+    </svg>
+
+    <svg id="svg5" width="300" height="400">
+
+        <rect id="bar1" x="65" y="72.64705882352942" width="30" height="57.35294117647059" style="fill: steelblue"></rect>
+        <rect id="bar2" x="130" y="103.23529411764707" width="30" height="26.76470588235294" style="fill: steelblue"></rect>
+
+
+        <text x="50" y="145">Together</text>
+        <text x="130" y="145">Apart</text>
+        <text x="40" y="200">Parent Cohabitation</text>
+    
+        <line x1="40" x2="180" y1="130" y2="130" stroke="black"></line>
+        <line x1="40" x2="40" y1="0" y2="130" stroke="black"></line>   
+    </svg>
+    
+    <script type="text/javascript">
+        
+        var CHART_HEIGHT = 130;
+        
+        var sex = [47, 53];
+        
+        var selection = d3.select('#svg1').selectAll('rect').data(sex)
+        
+        selection.attr('height', 
+            function(d) 
+            { 
+                return (d/102) * CHART_HEIGHT; 
+            }
+        );
+        selection.attr('y', function(d) { return (1-d/102) * CHART_HEIGHT; });
+
+        var school = [88, 12];
+        var selection1 = d3.select('#svg2').selectAll('rect').data(school)
+        selection1.attr('height', 
+            function(d) 
+            { 
+                return (d/102) * CHART_HEIGHT; 
+            }
+        );
+        selection1.attr('y', function(d) { return (1-d/102) * CHART_HEIGHT; });
+        var address = [78, 22];
+        
+        var selection2 = d3.select('#svg3').selectAll('rect').data(address)
+        
+        selection2.attr('height', 
+            function(d) 
+            { 
+                return (d/102) * CHART_HEIGHT; 
+            }
+        );
+        selection2.attr('y', function(d) { return (1-d/102) * CHART_HEIGHT; });
+        var famsize = [29, 71];
+        
+        var selection3 = d3.select('#svg4').selectAll('rect').data(famsize)
+        
+        selection3.attr('height', 
+            function(d) 
+            { 
+                return (d/102) * CHART_HEIGHT; 
+            }
+        );
+        selection3.attr('y', function(d) { return (1-d/102) * CHART_HEIGHT; });
+        var parco = [90, 10];
+        
+        var selection4 = d3.select('#svg5').selectAll('rect').data(parco)
+        
+        selection4.attr('height', 
+            function(d) 
+            { 
+                return (d/102) * CHART_HEIGHT; 
+            }
+        );
+        selection4.attr('y', function(d) { return (1-d/102) * CHART_HEIGHT; });
+
+
+    
+    </script>
+        </p>
+    </div> 
+  </section> 
+    <footer class="footbox"> 
+      <p class="word3">Victor Awo</p> 
+      <p class="word3"> VisINFO</p> 
+    </footer> 
+  </body> 
+</html>
